@@ -49,12 +49,12 @@ _Versions are at the minimum requirements._
 
 ### Running the Servers
 After completing the steps above you should now have two generated applications inside their respective folders.
+```
+~/Projects/
+├─ apps-ember
+│  └─ orchid #=> [Client] Run with `ember server`
+├─ apps-rails
+│  └─ orchid #=> [API] Run with `rails s`
+└─ cellar
+```
 
-```
--| ~/Projects
-  -| apps-ember
-    -| orchid #=> [Client] Run `ember server`
-  -| apps-rails
-    - | orchid #=> [API] Run `rails s`
-  -| cellar
-```
