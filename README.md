@@ -37,12 +37,24 @@ _Versions are at the minimum requirements._
 - Inside your new folder clone the [Cellar](https://github.com/sixthedge/cellar) repo and create two new directories `apps-rails` and `apps-ember`. These are **required** for the build process.
 - From the base of the `cellar` repo, run [totem-ember-cli](https://github.com/sixthedge/cellar/blob/master/src/totem/api/totem-cli/lib/totem/cli/totem_ember.rb) to build the client app.
 ```
-  ./src/totem/api/totem-cli/bin/totem-ember-cli ../apps-ember/orchid -o ./thinkspace/packages/otbl/client/run.yml --new -f -n
+  $ ./src/totem/api/totem-cli/bin/totem-ember-cli ../apps-ember/orchid -o ./thinkspace/packages/otbl/client/run.yml --new -f -n
 ```
 - From the root of the `cellar` repo, run [totem-app](https://github.com/sixthedge/cellar/blob/master/src/totem/api/totem-cli/lib/totem/cli/totem_app.rb) to build the API app.
 ```
-  ./src/totem/api/totem-cli/bin/totem-ember-cli ../apps-rails/orchid -o ./thinkspace/packages/otbl/client/run.yml --new -f
+  $ ./src/totem/api/totem-cli/bin/totem-ember-cli ../apps-rails/orchid -o ./thinkspace/packages/otbl/client/run.yml --new -f
 ```
 - From the newly generated `apps-rails/orchid` directory run 
-  - `bundle install` 
-  - `db:drop db:create totem:db:reset[ra] CONFIG=all AI=true`
+  - `$ bundle install` 
+  - `$ db:drop db:create totem:db:reset[ra] CONFIG=all AI=true`
+
+### Running the Servers
+After completing the steps above you should now have two generated applications inside their respective folders.
+
+```
+-| ~/Projects
+  -| apps-ember
+    -| orchid #=> [Client] Run `ember server`
+  -| apps-rails
+    - | orchid #=> [API] Run `rails s`
+  -| cellar
+```
